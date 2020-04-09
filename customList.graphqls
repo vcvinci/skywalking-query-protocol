@@ -25,7 +25,6 @@ type CustomInfo {
 # The aggregation query is different with the metric query.
 # All aggregation queries require backend or/and storage do aggregation in query time.
 extend type Query {
-    # TopN is an aggregation query.
     # customList(serviceId: ID!, name: String!, duration: Duration!, order: Order!): [CustomInfo!]!
     customList(serviceId: ID!): [CustomInfo!]!
 }
