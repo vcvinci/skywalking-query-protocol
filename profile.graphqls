@@ -117,7 +117,7 @@ type ProfiledSpan {
     spanId: Int!
     parentSpanId: Int!
     serviceCode: String!
-    serviceInstanceName: ID!
+    #serviceInstanceName: ID!
     startTime: Long!
     endTime: Long!
     endpointName: String
