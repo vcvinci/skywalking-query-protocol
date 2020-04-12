@@ -16,15 +16,13 @@
 
 type CustomInfo {
     apiName: String!
-    avgRespTime: Long!
-    maxRespTime: Long!
-    minRespTime: Long!
-    invokeTimes: Int!
+    avgRespTime: IntValues!
+    invokeTimes: IntValues!
 }
 
 # The aggregation query is different with the metric query.
 # All aggregation queries require backend or/and storage do aggregation in query time.
 extend type Query {
     # customList(serviceId: ID!, name: String!, duration: Duration!, order: Order!): [CustomInfo!]!
-    customList(serviceId: ID!): [CustomInfo!]!
+    customList(serviceId: ID!, duration: Duration!): [CustomInfo!]!
 }
